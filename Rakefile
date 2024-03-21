@@ -1,4 +1,5 @@
 require 'asciidoctor'
+require 'nokogiri'
 
 task default: %w[index.fo]
 
