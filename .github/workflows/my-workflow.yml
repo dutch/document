@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
+          version: 1.0
           packages: |
             build-essential
             ruby-dev
@@ -17,7 +18,7 @@ jobs:
             liblzma-dev
             patch
             libxml2-dev
-            libxslt-dev
+            libxslt1-dev
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
