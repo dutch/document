@@ -1,0 +1,9 @@
+= Technical Document
+Chris Lamberson <chris@lamberson.online>
+v0.1.0, 2024-03-20
+:doctype: book
+
+[preface]
+== Preface
+
+The story all starts here with this beautifully typeset document.
