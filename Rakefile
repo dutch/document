@@ -1,7 +1,16 @@
 require 'asciidoctor'
+require 'java'
 require 'nokogiri'
 
-task default: %w[index.fo]
+task default: %w[index.pdf]
+
+file 'document.pdf' => %w[index.fo] do |t|
+  fop_factory = org.apache.fop.apps.FopFactory.newInstance;
+  f = java.io.File.new(t.name)
+  fos = java.io.FileOutputStream.new(f)
+  out = java.io.BufferedOutputStream.new(fos)
+  fop = fop_factory.newFop(org.apache.fop.apps.MimeConstants.MIME_PDF, out)
+end
 
 file 'index.fo' => %w[index.xml] do |t|
   xml = Nokogiri::XML(File.read 'index.xml')
