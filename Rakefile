@@ -2,7 +2,7 @@ require 'asciidoctor'
 require 'java'
 require 'nokogiri'
 
-task default: %w[index.pdf]
+task default: %w[document.pdf]
 
 file 'document.pdf' => %w[index.fo] do |t|
   fop_factory = org.apache.fop.apps.FopFactory.newInstance;
