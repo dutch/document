@@ -3,5 +3,5 @@
   <xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/fo/docbook.xsl"/>
   <xsl:param name="fop1.extensions" select="1"/>
   <xsl:param name="body.font.family">sans-serif</xsl:param>
-  <xsl:param name="symbol.font.family" select=""/>
+  <xsl:param name="symbol.font.family"></xsl:param>
 </xsl:stylesheet>
