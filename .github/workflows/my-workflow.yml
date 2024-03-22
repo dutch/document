@@ -7,10 +7,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          version: 1.5
+          version: 1.6
           packages: |
             docbook-xsl-ns
             libfop-java
+            ttf-mscorefonts-installer
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true

@@ -5,6 +5,12 @@
       <pdf-a-mode>PDF/A-1b</pdf-a-mode>
       <fonts>
         <auto-detect/>
+        <substitutions>
+          <substitution>
+            <from font-family="Helvetica-Bold"/>
+            <to font-family="Arial"/>
+          </substitution>
+        </substitutions>
       </fonts>
     </renderer>
   </renderers>
