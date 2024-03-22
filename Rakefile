@@ -7,12 +7,13 @@ require 'nokogiri'
 
 task default: %w[document.pdf]
 
-file 'document.pdf' => %w[index.fo] do |t|
-  fop_factory = Java::OrgApacheFopApps::FopFactory.newInstance;
-  f = java.io.File.new(t.name)
-  fos = java.io.FileOutputStream.new(f)
-  out = java.io.BufferedOutputStream.new(fos)
-  fop = fop_factory.newFop(org.apache.fop.apps.MimeConstants.MIME_PDF, out)
+file 'document.pdf' => %w[index.fo fop.xconf] do |t|
+  conf = Java::JavaIo::File 'fop.xconf'
+  fop_factory = Java::OrgApacheFopApps::FopFactory::newInstance conf;
+  f = Java::JavaIo::File::new(t.name)
+  fos = Java::JavaIo::FileOutputStream::new(f)
+  out = Java::JavaIo::BufferedOutputStream::new(fos)
+  fop = fop_factory.newFop Java::OrgApacheFopApps::MimeConstants::MIME_PDF, out
 end
 
 file 'index.fo' => %w[index.xml] do |t|
