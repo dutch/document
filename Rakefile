@@ -8,11 +8,11 @@ require 'nokogiri'
 task default: %w[document.pdf]
 
 file 'document.pdf' => %w[index.fo fop.xconf] do |t|
-  conf = Java::JavaIo::File 'fop.xconf'
+  conf = Java::JavaIo::File::new 'fop.xconf'
   fop_factory = Java::OrgApacheFopApps::FopFactory::newInstance conf;
-  f = Java::JavaIo::File::new(t.name)
-  fos = Java::JavaIo::FileOutputStream::new(f)
-  out = Java::JavaIo::BufferedOutputStream::new(fos)
+  f = Java::JavaIo::File::new t.name
+  fos = Java::JavaIo::FileOutputStream::new f
+  out = Java::JavaIo::BufferedOutputStream::new fos
   fop = fop_factory.newFop Java::OrgApacheFopApps::MimeConstants::MIME_PDF, out
 end
 
