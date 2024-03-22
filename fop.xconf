@@ -7,9 +7,6 @@
         <font embed-url="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf">
           <font-triplet name="Liberation Serif" style="normal" weight="normal"/>
         </font>
-        <font embed-url="/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf">
-          <font-triplet name="Helvetica" style="normal" weight="bold"/>
-        </font>
       </fonts>
     </renderer>
   </renderers>
