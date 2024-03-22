@@ -19,7 +19,7 @@ file 'document.pdf' => %w[index.fo fop.xconf] do |t|
   fop = fop_factory.newFop Java::OrgApacheFopApps::MimeConstants::MIME_PDF, out
   xformer_factory = Java::JavaxXmlTransform::TransformerFactory::newInstance
   xformer = xformer_factory.newTransformer
-  src = Java::JavaxXmlTransform::StreamSource::new fo
+  src = Java::JavaxXmlTransformStream::StreamSource::new fo
   res = Java::JavaxXmlTransformSax::SAXResult fop.getDefaultHandler
   xformer.transform src, res
 end
