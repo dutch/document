@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:db="http://docbook.org/ns/docbook" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:template match="/db:book">
-    <root>
-      <foo bar="baz"/>
-    </root>
-  </xsl:template>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/fo/docbook.xsl"/>
+  <xsl:param name="fop1.extensions" select="1"/>
 </xsl:stylesheet>
