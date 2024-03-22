@@ -4,13 +4,9 @@
     <renderer mime="application/pdf">
       <pdf-a-mode>PDF/A-1b</pdf-a-mode>
       <fonts>
-        <auto-detect/>
-        <substitutions>
-          <substitution>
-            <from font-family="Helvetica-Bold"/>
-            <to font-family="Arial"/>
-          </substitution>
-        </substitutions>
+        <font embed-url="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf">
+          <font-triplet name="Liberation Serif" style="normal" weight="normal">
+        </font>
       </fonts>
     </renderer>
   </renderers>
