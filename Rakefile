@@ -9,7 +9,7 @@ task default: %w[document.pdf]
 
 file 'document.pdf' => %w[index.fo fop.xconf] do |t|
   conf = Java::JavaIo::File::new 'fop.xconf'
-  fop_factory = Java::OrgApacheFopApps::FopFactory::newInstance conf;
+  fop_factory = Java::OrgApacheFopApps::FopFactory::newInstance conf.getAbsoluteFile;
   f = Java::JavaIo::File::new t.name
   fos = Java::JavaIo::FileOutputStream::new f
   out = Java::JavaIo::BufferedOutputStream::new fos
