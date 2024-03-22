@@ -7,9 +7,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          version: 1.4
+          version: 1.5
           packages: |
-            docbook-xsl-doc-pdf
+            docbook-xsl-ns
             libfop-java
       - uses: ruby/setup-ruby@v1
         with:
