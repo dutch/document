@@ -3,19 +3,17 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      BUNDLE_FORCE_RUBY_PLATFORM: true
-      BUNDLE_BUILD__NOKOGIRI: --use-system-libraries
     steps:
       - uses: actions/checkout@v4
       - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          version: 1.3
+          version: 1.4
           packages: |
-            jruby
             docbook-xsl-doc-pdf
             libfop-java
-      - run: jruby -S bundle install
-      - run: jruby -S bundle exec rake
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec rake
       - run: ls -l
       - run: cat index.fo
