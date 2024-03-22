@@ -20,7 +20,7 @@ file 'document.pdf' => %w[index.fo fop.xconf] do |t|
   xformer_factory = Java::JavaxXmlTransform::TransformerFactory::newInstance
   xformer = xformer_factory.newTransformer
   src = Java::JavaxXmlTransformStream::StreamSource::new fo
-  res = Java::JavaxXmlTransformSax::SAXResult fop.getDefaultHandler
+  res = Java::JavaxXmlTransformSax::SAXResult::new fop.getDefaultHandler
   xformer.transform src, res
 end
 
