@@ -1,6 +1,6 @@
 require 'asciidoctor'
 require 'java'
-require 'fop.jar'
+require '/usr/share/java/fop.jar'
 require 'nokogiri'
 
 task default: %w[document.pdf]
