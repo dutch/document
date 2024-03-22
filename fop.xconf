@@ -5,7 +5,7 @@
       <pdf-a-mode>PDF/A-1b</pdf-a-mode>
       <fonts>
         <font embed-url="/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf">
-          <font-triplet name="Liberation Serif" style="normal" weight="normal">
+          <font-triplet name="Liberation Serif" style="normal" weight="normal"/>
         </font>
       </fonts>
     </renderer>
