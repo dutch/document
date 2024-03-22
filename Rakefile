@@ -1,11 +1,12 @@
 require 'asciidoctor'
 require 'java'
+require 'fop.jar'
 require 'nokogiri'
 
 task default: %w[document.pdf]
 
 file 'document.pdf' => %w[index.fo] do |t|
-  fop_factory = org.apache.fop.apps.FopFactory.newInstance;
+  fop_factory = Java::OrgApacheFopApps::FopFactory.newInstance;
   f = java.io.File.new(t.name)
   fos = java.io.FileOutputStream.new(f)
   out = java.io.BufferedOutputStream.new(fos)
