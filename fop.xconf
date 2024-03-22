@@ -3,6 +3,9 @@
   <renderers>
     <renderer mime="application/pdf">
       <pdf-a-mode>PDF/A-1b</pdf-a-mode>
+      <fonts>
+        <auto-detect/>
+      </fonts>
     </renderer>
   </renderers>
 </fop>
